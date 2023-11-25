@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    		font-family: Arial, sans-serif;
+   		text-align: center;
+   		margin: 0;
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		height: 100vh;
+    		overflow: hidden;
+}
+
+#video-container {
+    width: 100%; /* 將 width 設置為 100% */
+    max-width: 800px; /* 設置最大寬度 */
+    margin: 0 auto; /* 水平置中 */
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+    </style>
+</head>
+<body>
+
+<div id="video-container">
+    <video id="myVideo" width="100%" controls>
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+
+    var videoList = [
+        'https://drive.google.com/uc?export=download&id=1ZrU0cNRAfF-8xksw0cGw-gtogUlNmUaE',
+        'https://drive.google.com/uc?export=download&id=1ZgkJzyVLTIiN9r7XMGBh8b_1vbQ1-JkM',
+        'https://drive.google.com/uc?export=download&id=1ZQQqaPp079H68g7d6skP9aHR6I90Vgaa',
+        'https://drive.google.com/uc?export=download&id=1ZQrHw7M3X3ZYffXSEISTrPktxDHc0JA7',
+        'https://drive.google.com/uc?export=download&id=1ZXmU3VyTmP4KJzTYOU2ToxsTJ-c8LJvj',
+        'https://drive.google.com/uc?export=download&id=1ZbsxIJL-eCrTFmVO8zJMX1DimYF13m79',
+        'https://drive.google.com/uc?export=download&id=1ZQB7IMRqXIUWr6hUVyQeqrCGtmWDzE6o',
+        'https://drive.google.com/uc?export=download&id=1Zdv_8jivNW-CsB11iNNG04x5lfO1CyQT',
+        'https://drive.google.com/uc?export=download&id=1ZeB1r9nMzg7FwluAdKbe1EvgB-ylH-XF',
+        'https://drive.google.com/uc?export=download&id=1Q-dKMS9Zl4xocYz9XAlMyeWraAHqEI_l',
+        'https://drive.google.com/uc?export=download&id=1PuTCXP-iOoXvBjdEhbXA0IeeN5JM6SAh'
+
+    ];
+
+
+    var randomIndex = Math.floor(Math.random() * videoList.length);
+    var randomVideo = videoList[randomIndex];
+
+
+    var videoElement = document.getElementById('myVideo');
+    videoElement.src = randomVideo;
+
+
+    videoElement.addEventListener('ended', function () {
+    });
+
+    videoElement.play();
+</script>
+
+</body>
+</html>
