@@ -63,7 +63,7 @@ video {
 
 
     videoElement.addEventListener('ended', function () {
-	var message = "videoEnded";
+	console.log("video ended");
 	window.postMessage("videoEnded");
     });
 
