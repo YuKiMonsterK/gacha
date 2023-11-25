@@ -63,10 +63,10 @@ video {
 
 
     videoElement.addEventListener('ended', function () {
+	var message = "videoEnded";
+	window.postMessage("videoEnded");
     });
 
-    videoElement.play();
 </script>
-
 </body>
 </html>
