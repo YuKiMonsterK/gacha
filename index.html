@@ -57,19 +57,20 @@
     ];
     
     var randomIndex = Math.floor(Math.random() * videoList.length);
-var randomVideo = videoList[randomIndex];
-videoElement.src = randomVideo;
+    var randomVideo = videoList[randomIndex];
 
-document.addEventListener('DOMContentLoaded', function() {
-    var videoElement = document.getElementById('myVideo');
-    videoElement.addEventListener('play', function() {
-        window.AppInventor.setWebViewString("Start");
-    });
-    videoElement.addEventListener('ended', function() {
-        window.AppInventor.setWebViewString("End");
-    });
-});
+    document.addEventListener('DOMContentLoaded', function() {
+        var videoElement = document.getElementById('myVideo');
+        videoElement.src = randomVideo;
 
+        videoElement.addEventListener('play', function() {
+            window.AppInventor.setWebViewString("Start");
+        });
+
+        videoElement.addEventListener('ended', function() {
+            window.AppInventor.setWebViewString("End");
+        });
+    });
 </script>
 </body>
 </html>
