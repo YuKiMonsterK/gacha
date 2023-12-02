@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>請按下開始影片以獲取鑽石</title>
+    
     <style>
         body {
     		font-family: Arial, sans-serif;
@@ -16,20 +16,32 @@
     		overflow: hidden;
 }
 
-#video-container {
-    width: 100%; /* 將 width 設置為 100% */
-    max-width: 800px; /* 設置最大寬度 */
-    margin: 0 auto; /* 水平置中 */
-}
+#top-text {
+            position: absolute;
+            top: 10px; /* 調整文字與頂部的距離 */
+            left: 50%; /* 調整文字水平置中 */
+            transform: translateX(-50%); /* 以 left: 50% 為基準進行水平居中 */
+            color: white; /* 文字顏色 */
+            font-size: 16px; /* 文字大小 */
+        }
 
-video {
-    width: 100%;
-    height: auto;
-}
+        #video-container {
+            position: relative; /* 使 #video-container 成為相對定位的容器 */
+            width: 100%; /* 將 width 設置為 100% */
+            max-width: 800px; /* 設置最大寬度 */
+            margin: 0 auto; /* 水平置中 */
+        }
 
+        video {
+            width: 100%;
+            height: auto;
+            max-width: 100%; /* 設置最大寬度為 100% */
+        }
     </style>
 </head>
 <body>
+
+<div id="top-text">請播放影片以獲取鑽石</div>
 
 <div id="video-container">
     <video id="myVideo" width="100%" controls>
