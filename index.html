@@ -56,20 +56,19 @@
         'https://drive.google.com/uc?export=download&id=1PuTCXP-iOoXvBjdEhbXA0IeeN5JM6SAh'
     ];
     
-    document.addEventListener('DOMContentLoaded', function() {
-        var videoElement = document.getElementById('myVideo');
-        var randomIndex = Math.floor(Math.random() * videoList.length);
-        var randomVideo = videoList[randomIndex];
-        videoElement.src = randomVideo;
+    var randomIndex = Math.floor(Math.random() * videoList.length);
+var randomVideo = videoList[randomIndex];
 
-        videoElement.addEventListener('play', function() {
-            window.AppInventor.setWebViewString("Start");
-        });
-
-        videoElement.addEventListener('ended', function() {
-            window.AppInventor.setWebViewString("End");
-        });
+document.addEventListener('DOMContentLoaded', function () {
+    var videoElement = document.getElementById('myVideo');
+    videoElement.src = randomVideo; // 移到這裡
+    videoElement.addEventListener('play', function () {
+        window.AppInventor.setWebViewString("Start");
     });
+    videoElement.addEventListener('ended', function () {
+        window.AppInventor.setWebViewString("End");
+    });
+});
 </script>
 </body>
 </html>
