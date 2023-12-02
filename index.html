@@ -58,10 +58,10 @@
     
     var randomIndex = Math.floor(Math.random() * videoList.length);
 var randomVideo = videoList[randomIndex];
-var videoElement = document.getElementById('myVideo');
 videoElement.src = randomVideo;
 
 document.addEventListener('DOMContentLoaded', function() {
+    var videoElement = document.getElementById('myVideo');
     videoElement.addEventListener('play', function() {
         window.AppInventor.setWebViewString("Start");
     });
