@@ -64,17 +64,17 @@ video {
 
     ];
 
-    window.AppInventor.setWebViewString("Start")
+    
     var randomIndex = Math.floor(Math.random() * videoList.length);
     var randomVideo = videoList[randomIndex];
 
 
     var videoElement = document.getElementById('myVideo');
     videoElement.src = randomVideo;
-    
-
+    video.addEventListener('play', function() {
+   	window.AppInventor.setWebViewString("Start")
+    });
     videoElement.addEventListener('ended', function () {
-	console.log("video ended");
 	window.AppInventor.setWebViewString("End")
     });
 
