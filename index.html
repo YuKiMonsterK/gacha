@@ -56,11 +56,10 @@
         'https://drive.google.com/uc?export=download&id=1PuTCXP-iOoXvBjdEhbXA0IeeN5JM6SAh'
     ];
     
-    var randomIndex = Math.floor(Math.random() * videoList.length);
-    var randomVideo = videoList[randomIndex];
-
     document.addEventListener('DOMContentLoaded', function() {
         var videoElement = document.getElementById('myVideo');
+        var randomIndex = Math.floor(Math.random() * videoList.length);
+        var randomVideo = videoList[randomIndex];
         videoElement.src = randomVideo;
 
         videoElement.addEventListener('play', function() {
