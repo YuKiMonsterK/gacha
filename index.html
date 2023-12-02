@@ -61,12 +61,8 @@
 
     var videoElement = document.getElementById('myVideo');
     videoElement.src = randomVideo;
-    video.addEventListener('play', function() {
-   	window.AppInventor.setWebViewString("Start")
-    });
     document.addEventListener('DOMContentLoaded', function() {
             var video = document.getElementById('myVideo');
-
             video.addEventListener('play', function() {
                 window.AppInventor.setWebViewString("Start")
             });
