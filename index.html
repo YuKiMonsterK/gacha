@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <style>
         body {
-    		font-family: Arial, sans-serif;
-   		text-align: center;
-   		margin: 0;
-    		display: flex;
-    		align-items: center;
-    		justify-content: center;
-    		height: 100vh;
-    		overflow: hidden;
-}
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-#top-text {
+        #top-text {
             position: absolute;
-            top: 10px; /* 調整文字與頂部的距離 */
-            left: 50%; /* 調整文字水平置中 */
-            transform: translateX(-50%); /* 以 left: 50% 為基準進行水平居中 */
-            color: black; /* 文字顏色 */
-            font-size: 16px; /* 文字大小 */
-	    z-index: 1; /* 設置文字的 z-index，使其位於影片之上 */
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: black;
+            font-size: 16px;
+            z-index: 1; /* 設置文字的 z-index，使其位於影片之上 */
         }
 
         #video-container {
-            position: relative; /* 使 #video-container 成為相對定位的容器 */
-            width: 100%; /* 將 width 設置為 100% */
-            max-width: 800px; /* 設置最大寬度 */
-            margin: 0 auto; /* 水平置中 */
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            z-index: 0; /* 設置影片的 z-index，確保位於文字之下 */
         }
 
         video {
             width: 100%;
             height: auto;
-            max-width: 100%; /* 設置最大寬度為 100% */
+            max-width: 100%;
         }
     </style>
 </head>
@@ -49,6 +49,7 @@
         Your browser does not support the video tag.
     </video>
 </div>
+
 
 <script>
 
