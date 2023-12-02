@@ -59,16 +59,16 @@
     var randomIndex = Math.floor(Math.random() * videoList.length);
     var randomVideo = videoList[randomIndex];
     var videoElement = document.getElementById('myVideo');
-	videoElement.src = randomVideo;
-	document.addEventListener('DOMContentLoaded', function() {
-    var video = document.getElementById('myVideo');
-    video.addEventListener('play', function() {
-        window.AppInventor.setWebViewString("Start");
+    videoElement.src = randomVideo;
+    document.addEventListener('DOMContentLoaded', function() {
+    	var video = document.getElementById('myVideo');
+    	video.addEventListener('play', function() {
+        	window.AppInventor.setWebViewString("Start");
+    	});
+    	video.addEventListener('ended', function() {
+        	window.AppInventor.setWebViewString("End");
+    	});
     });
-    video.addEventListener('ended', function() {
-        window.AppInventor.setWebViewString("End");
-    });
-});
 
 </script>
 </body>
