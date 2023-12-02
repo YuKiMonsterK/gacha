@@ -16,10 +16,11 @@
 		flex-direction: column; /* 垂直排列元素 */
 	     }
 	#message {
-   		 font-size: 18px;
-   		 margin-top: -15px; /* 相對於影片的上方15像素 */
-  		 margin-bottom: 20px; /* 與影片之間的垂直間距 */
- 		 }
+                font-size: 18px;
+    		margin-bottom: 20px; /* 與影片之間的垂直間距 */
+    		position: relative;
+    		top: -15px; /* 向上移動15像素 */
+		}
 	#video-container {
    		 width: 100%; /* 將 width 設置為 100% */
    		 max-width: 800px; /* 設置最大寬度 */
