@@ -13,42 +13,30 @@
             justify-content: center;
             height: 100vh;
             overflow: hidden;
-        }
-
-        #top-text {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: black;
-            font-size: 16px;
-            z-index: 1; /* 設置文字的 z-index，使其位於影片之上 */
+            flex-direction: column; /* 垂直排列元素 */
         }
 
         #video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            z-index: 0; /* 設置影片的 z-index，確保位於文字之下 */
+            width: 100%; /* 將 width 設置為 100% */
+            max-width: 800px; /* 設置最大寬度 */
+            margin: 0 auto; /* 水平置中 */
         }
 
         video {
             width: 100%;
             height: auto;
-            max-width: 100%;
+            margin-top: 20px; /* 與文字之間的垂直間距 */
+        }
+
+        #message {
+            font-size: 18px;
+            margin-bottom: 20px; /* 與影片之間的垂直間距 */
         }
     </style>
 </head>
 <body>
 
-<div id="top-text">請播放影片以獲取鑽石</div>
-
-<div id="video-container">
-    <video id="myVideo" width="100%" controls>
-        Your browser does not support the video tag.
-    </video>
-</div>
+<div id="message">請播放影片以獲取鑽石</div>
 
 
 <script>
