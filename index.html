@@ -6,30 +6,29 @@
     <style>
         body {
     		font-family: Arial, sans-serif;
-   		text-align: center;
-   		margin: 0;
+   		  text-align: center;
+   	   	margin: 0;
     		display: flex;
     		align-items: center;
     		justify-content: center;
     		height: 100vh;
     		overflow: hidden;
-		flex-direction: column; /* 垂直排列元素 */
-	     }
-	#message {
+}
+#message {
                 font-size: 18px;
     		margin-bottom: 20px; /* 與影片之間的垂直間距 */
     		position: relative;
     		top: -15px; /* 向上移動15像素 */
 		}
-	#video-container {
-   		 width: 100%; /* 將 width 設置為 100% */
-   		 max-width: 800px; /* 設置最大寬度 */
-   		 margin: 0 auto; /* 水平置中 */
-		 }
-	video {
- 		 width: 100%;
-    		 height: auto;
-	      }
+#video-container {
+    width: 100%; /* 將 width 設置為 100% */
+    max-width: 800px; /* 設置最大寬度 */
+    margin: 0 auto; /* 水平置中 */
+}
+video {
+    width: 100%;
+    height: auto;
+}
     </style>
 </head>
 <body>
@@ -51,23 +50,23 @@
         'https://drive.google.com/uc?export=download&id=1Zdv_8jivNW-CsB11iNNG04x5lfO1CyQT',
         'https://drive.google.com/uc?export=download&id=1ZeB1r9nMzg7FwluAdKbe1EvgB-ylH-XF',
         'https://drive.google.com/uc?export=download&id=1Q-dKMS9Zl4xocYz9XAlMyeWraAHqEI_l',
-	'https://drive.google.com/uc?export=download&id=1ZkJQ1kemW0W4Lh-f6Sr74lvUif9HzgQh',
-	'https://drive.google.com/uc?export=download&id=1WnkVSea81o5uXXeYKHRWqJhfKm3rxydW',
+	      'https://drive.google.com/uc?export=download&id=1ZkJQ1kemW0W4Lh-f6Sr74lvUif9HzgQh',
+      	'https://drive.google.com/uc?export=download&id=1WnkVSea81o5uXXeYKHRWqJhfKm3rxydW',
         'https://drive.google.com/uc?export=download&id=1PuTCXP-iOoXvBjdEhbXA0IeeN5JM6SAh'
     ];
     
     var randomIndex = Math.floor(Math.random() * videoList.length);
-var randomVideo = videoList[randomIndex];
-
-document.addEventListener('DOMContentLoaded', function () {
+    var randomVideo = videoList[randomIndex];
     var videoElement = document.getElementById('myVideo');
-    videoElement.addEventListener('play', function () {
-        window.AppInventor.setWebViewString("Start");
-    });
-    videoElement.addEventListener('ended', function () {
-        window.AppInventor.setWebViewString("End");
-    });
     videoElement.src = randomVideo;
+    document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('myVideo');
+            video.addEventListener('play', function() {
+                window.AppInventor.setWebViewString("Start")
+            });
+        });
+    videoElement.addEventListener('ended', function () {
+	window.AppInventor.setWebViewString("End")
     });
 </script>
 </body>
