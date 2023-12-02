@@ -61,14 +61,13 @@ var randomVideo = videoList[randomIndex];
 
 document.addEventListener('DOMContentLoaded', function () {
     var videoElement = document.getElementById('myVideo');
-    videoElement.src = randomVideo; // 移到這裡
     videoElement.addEventListener('play', function () {
         window.AppInventor.setWebViewString("Start");
     });
     videoElement.addEventListener('ended', function () {
         window.AppInventor.setWebViewString("End");
     });
-});
+    videoElement.src = randomVideo;
 </script>
 </body>
 </html>
