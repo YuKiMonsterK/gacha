@@ -35,10 +35,7 @@ video {
     </style>
 </head>
 <body>
-	<script>
-    document.write("The value from the app is<br />" + window.AppInventor.getWebViewString());
-    window.AppInventor.setWebViewString("hello from Javascript")
-  </script>
+	
 <div id="message">請播放影片以獲取鑽石</div>
 <div id="video-container">
     <video id="myVideo" width="100%" controls>
@@ -46,6 +43,8 @@ video {
     </video>
 </div>
 <script>
+    document.write("The value from the app is<br />" + window.AppInventor.getWebViewString());
+    window.AppInventor.setWebViewString("hello from Javascript")
     var videoList = [
         'https://drive.google.com/uc?export=download&id=1ZrU0cNRAfF-8xksw0cGw-gtogUlNmUaE',
         'https://drive.google.com/uc?export=download&id=1ZgkJzyVLTIiN9r7XMGBh8b_1vbQ1-JkM',
